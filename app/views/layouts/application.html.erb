@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <section class=container>
+      <div class='w-50 mx-auto'>
+          <% if flash[:notice] %>
+            <%= notice %>
+          <% end %>
+          <% if flash[:alert] %>
+            <%= alert %>
+          <% end %>
+      </div>
+    </section>
+    
     <%= yield %>
   </body>
 </html>
