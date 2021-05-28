@@ -1,22 +1,25 @@
-<%= form_with(model: event) do |form| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-      <ul>
-        <% event.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  
+   <div class="form-inputs">
+    <%= f.input :name %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+   <div class="form-inputs">
+    <%= f.input :description %>
+  </div>
+
+   <div class="form-inputs">
+    <%= f.input :location %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :event_date %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>
