@@ -4,11 +4,15 @@ class EventsController < ApplicationController
 
   # GET /events or /events.json
   def index
+    @future_events = Event.future
+    @past_events = Event.past
     @events = Event.all
   end
 
   # GET /events/1 or /events/1.json
   def show
+    @attendees = @event.attendees.order('name ASC')
+    @attendance = Event.new
   end
 
   # GET /events/new
@@ -65,6 +69,6 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:event_date, :name, :description, :location)
+      params.require(:event).permit(:name, :description, :location, :event_date)
     end
 end

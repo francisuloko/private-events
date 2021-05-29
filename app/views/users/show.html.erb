@@ -1,5 +1,30 @@
-<h1>List of Events you created</h1>
+<section>
+  <h2>Events you created</h2>
 
-<% @user_events.each do |event| %>
- <%= event %>
-<% end %>
+  <% @created_events.each do |event| %>
+    <p>
+      <%= event.name %>
+    </p>
+  <% end %>
+</section>
+
+<section>
+  <h2>Events Calendar</h2>
+
+  <h3>Upcoming Events </h3>
+    <% @invitations.each do |invitation| %>
+        <% if invitation.date > Time.now %>
+        <p>
+            <%= event.name %>
+        </p>
+        <% end %>
+    <% end  %>
+  <h3>Past Events </h3>
+    <% @invitations.each do |invitation| %>
+        <% if invitation.date < Time.now %>
+            <p>
+                <%= event.name %>
+            </p>
+        <% end %>
+    <% end %>
+</section>
