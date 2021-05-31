@@ -11,11 +11,11 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 2 }
 
-  def accept!(event)
+  def attend!(event)
     event_attendees.create!(attended_event_id: event.id)
   end
 
-  def decline!(event)
+  def cancel!(event)
     event_attendees.find_by(attended_event_id: event.id).destroy
   end
 end

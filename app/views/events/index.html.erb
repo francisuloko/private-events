@@ -1,7 +1,22 @@
 <section>
   <h1>Events</h1>
-  <h3>All</h3>
+  <h3>Upcoming Events</h3>
+  <% @future_events.each do |event| %>
+    <p>
+      <%= event.name %>
+      <%= event.event_date %>
+    </p>
+  <% end %>
 
+  <h3>Past Events</h3>
+  <% @past_events.each do |event| %>
+    <p>
+      <%= event.name %>
+      <%= event.event_date %>
+    </p>
+  <% end %>
+
+  <h3>All Event</h3>
   <% @events.each do |event| %>
     <p>
       <%= event.name %>

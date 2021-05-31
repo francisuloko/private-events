@@ -4,6 +4,7 @@
   <% @created_events.each do |event| %>
     <p>
       <%= event.name %>
+      <%= event.event_date %>
     </p>
   <% end %>
 </section>
@@ -11,20 +12,17 @@
 <section>
   <h2>Events Calendar</h2>
 
-  <h3>Upcoming Events </h3>
-    <% @invitations.each do |invitation| %>
-        <% if invitation.date > Time.now %>
-        <p>
-            <%= event.name %>
-        </p>
-        <% end %>
-    <% end  %>
-  <h3>Past Events </h3>
-    <% @invitations.each do |invitation| %>
-        <% if invitation.date < Time.now %>
-            <p>
-                <%= event.name %>
-            </p>
-        <% end %>
-    <% end %>
+  <h3>Upcoming Events</h3>
+  <% @future_events.each do |event| %>
+    <p>
+        <%= event.name %>
+    </p>
+  <% end  %>
+
+  <h3>Past Events</h3>
+  <% @past_events.each do |event| %>
+    <p>
+        <%= event.name %>
+    </p>
+  <% end %>
 </section>
