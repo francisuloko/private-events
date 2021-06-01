@@ -11,7 +11,7 @@ end
 RSpec.describe Event, type: :model do
   subject do
     User.create(id: 10, name: 'Foo', email: 'foo@bar.com', password: '123456')
-    
+
     Event.new(name: 'Event name',
               description: 'Lorem ipsum',
               event_date: DateTime.now,

@@ -6,4 +6,3 @@ RSpec.describe EventAttendee, type: :model do
     it { should belong_to(:attended_event).class_name('Event') }
   end
 end
-
