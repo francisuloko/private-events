@@ -35,6 +35,9 @@ Install [Ruby](https://www.theodinproject.com/courses/ruby-programming/lessons/i
 - Change into the project directory, run
 `cd private-events`
 
+- Wepacker needs to be installed, run
+`rails webpacker:install`
+
 - Install gems and dependencies, run
 `bundle install`
 
