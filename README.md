@@ -3,7 +3,7 @@
 # Members Only (Rails Authentication)
 [Solo Project]
 
->  In this Rails Association project involves building an You want to build a site similar to a private Eventbrite which allows users to create events and then manage user signups. A user can create events. A user can attend many events. An event can be attended by many users.
+>  This Rails Association project involves building a site similar to a private Eventbrite which allows users to create events and then manage user signups. A user can create events. A user can attend many events. An event can be attended by many users.
 
 This project demonstrates my understanding of ActiveRecord Association and Queries. The project has three models: user, event and event_attendee. I have used the belongs_to and has_many association to show that an event belongs to a user and a user has many events. I also used methods like through to make assocation between user and event through the event_attendees table.
 
