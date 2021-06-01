@@ -1,24 +1,84 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Members Only (Rails Authentication)
+[Solo Project]
 
-Things you may want to cover:
+>  This Rails Association project involves building a site similar to a private Eventbrite which allows users to create events and then manage user signups. A user can create events. A user can attend many events. An event can be attended by many users.
 
-* Ruby version
+This project demonstrates my understanding of ActiveRecord Association and Queries. The project has three models: user, event and event_attendee. I have used the belongs_to and has_many association to show that an event belongs to a user and a user has many events. I also used methods like through to make assocation between user and event through the event_attendees table.
 
-* System dependencies
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby 2.7.0
 
-* Database initialization
+- Ruby on Rails 6.1.1
 
-* How to run the test suite
+- Devise gem
 
-* Services (job queues, cache servers, search engines, etc.)
+- RuboCop
 
-* Deployment instructions
+- Bootstrap and Bulma
 
-* ...
+- Rspec and Capybara
+
+
+## Prerequisites
+Install [Ruby](https://www.theodinproject.com/courses/ruby-programming/lessons/installing-ruby-ruby-programming), [Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/your-first-rails-application-ruby-on-rails), sqlite3, text editior, browser, git
+
+
+## Getting Started
+
+- To get a local copy of this project, run
+`git clone https://github.com/francisuloko/private-events.git`
+
+- Change into the project directory, run
+`cd private-events`
+
+- Wepacker needs to be installed, run
+`rails webpacker:install`
+
+- Install gems and dependencies, run
+`bundle install`
+
+- To set up your database, run
+`/bin/rails db:migrate`
+
+- To start the app in your browser, run
+`/bin/rails server`
+
+- To Explore the project in your browser, visit
+`http://localhost:3000`
+
+- To close the server, run
+`Ctrl C`
+
+- To interact with the app and models from console, run
+`/bin/rails console`
+
+- To run the tests, run
+`bundle exec rspec`
+
+
+## Author
+
+👤 **Francis Uloko**
+
+[Github](https://github.com/francisuloko)
+[Twitter](https://twitter.com/francisuloko)
+[LinkedIn](https://linkedin.com/in/francisuloko)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/francisuloko/private-events/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://en.wikipedia.org/wiki/MIT_License) licensed.
